@@ -7,24 +7,51 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "YOUR COLLECTION NAME";
-const description = "Remember to replace this description";
+const namePrefix = "WE ARE THE RESISTANCE";
+const description = "We are the Resistance project"; // WatR
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 10,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "background" },
+      { name: "head" },
+      { name: "face" },
+      { name: "outfit" },
+      { name: "pin" },
+      { name: "hat" },
+      { name: "hands" },
+      { name: "eyewear" },
     ],
   },
+  {
+    growEditionSizeTo: 20,
+    layersOrder: [
+      { name: "background" },
+      { name: "head" },
+      { name: "face" },
+      { name: "outfit_with_hand" },
+      { name: "pin" },
+      { name: "hat" },
+      { name: "eyewear" },
+    ],
+  },
+  {
+    growEditionSizeTo: 30,
+    layersOrder: [
+      { name: "background_unique" },
+      { name: "head" },
+      { name: "face" },
+      { name: "outfit_unique" },
+      { name: "pin" },
+      { name: "hat" },
+      { name: "hands" },
+      { name: "eyewear" },
+    ],
+  },
+  
 ];
 
 const shuffleLayerConfigurations = true;
@@ -32,8 +59,8 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 3000,
+  height: 3000,
   smoothing: false,
 };
 
@@ -59,7 +86,7 @@ const MINT_PRICE = 1; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. 
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-04-22T20:00:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
